@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DIMZ BUILDER STUDIO</title><link rel="icon" href="assets/logo.svg">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/material-darker.min.css">
+<link rel="stylesheet" href="style.css"></head><body>
+<aside class="side glass" id="side"><div class="brand"><img src="assets/logo.svg" width="36" alt=""><div><b>DIMZ</b> BUILDER<small>STUDIO</small></div></div><nav class="nav" id="nav"></nav><div class="slogan">BUILD YOUR IDEA INTO REALITY.</div></aside>
+<main class="main"><header class="top glass"><button class="btn ico" id="burger" data-i="menu"></button><h1 id="title"></h1><span class="chip" id="srv">Server: memeriksa…</span><button class="btn ico" id="theme" data-i="sun"></button></header>
+<section class="view on" id="v-dashboard"><div class="stats"><div class="glass stat"><span>Total Project</span><b id="s-p">0</b></div><div class="glass stat"><span>Total Build</span><b id="s-b">0</b></div><div class="glass stat"><span>Build Berhasil</span><b id="s-ok">0</b></div><div class="glass stat"><span>Project Terakhir</span><b class="sm" id="s-last">-</b></div></div>
+<div class="cols"><div class="glass pad"><h3>Riwayat &amp; Status Build</h3><div class="list" id="d-builds"></div></div><div class="glass pad"><h3>Mulai Cepat</h3><div class="row" id="quick"></div><p class="mu">Build APK membutuhkan build server (lihat README).</p></div></div></section>
+<section class="view" id="v-zip2apk"></section><section class="view" id="v-html2apk"></section><section class="view" id="v-zip2web"></section>
+<section class="view" id="v-html2web"><div class="glass pad"><div class="tabs" id="tabs"><button class="btn on" data-t="html">HTML</button><button class="btn" data-t="css">CSS</button><button class="btn" data-t="js">JavaScript</button></div><div id="ed-html"></div><div id="ed-css" hidden></div><div id="ed-js" hidden></div>
+<div class="row"><button class="btn pri" id="ed-dl">Download HTML</button><button class="btn" id="ed-zip">Export ZIP</button><button class="btn" id="ed-save">Simpan Project</button><button class="btn" id="ed-apk">Jadikan APK →</button></div><p class="mu">Editor HTML berisi isi &lt;body&gt;.</p></div>
+<div class="glass pad"><h3>Live Preview</h3><iframe class="frame" id="ed-frame" sandbox="allow-scripts allow-modals allow-forms"></iframe></div></section>
+<section class="view" id="v-files"><div class="glass pad"><h3>File Manager <small class="mu" id="f-name"></small></h3><div class="row"><button class="btn" id="f-zip">Unduh ZIP</button></div><div class="list" id="f-list"></div><pre class="log" id="f-view" hidden></pre></div></section>
+<section class="view" id="v-history"><div class="glass pad"><h3>Project Tersimpan</h3><div class="list" id="h-projects"></div></div><div class="glass pad"><h3>Riwayat Build</h3><div class="list" id="h-builds"></div></div></section>
+<section class="view" id="v-settings"><div class="glass pad"><h3>Pengaturan</h3><label>URL Build Server<input id="api"></label><div class="row"><button class="btn pri" id="api-save">Simpan &amp; Tes Koneksi</button><button class="btn" id="theme2">Ganti Tema</button><button class="btn dng" id="wipe">Hapus Semua Data</button></div></div></section>
+<section class="view" id="v-help"><div class="glass pad help"><h3>Bantuan</h3><ol><li>Jalankan build server (folder <code>server/</code>, lihat README.md) lalu cek indikator di pojok kanan atas.</li><li><b>ZIP → APK</b>: upload ZIP, isi nama, package (mis. <code>com.dimz.app</code>), versi &amp; ikon, klik Build APK, lalu download.</li><li><b>HTML → APK</b>: pilih file HTML (boleh beserta CSS/JS/gambar).</li><li><b>ZIP → Website</b>: upload ZIP, cek preview, download ZIP siap hosting.</li><li><b>HTML → Website</b>: tulis kode, lihat live preview, download HTML atau ZIP.</li></ol><p>Package name hanya huruf kecil, angka, underscore, minimal dua segmen dipisah titik.</p></div></section>
+</main><div id="toasts"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/xml/xml.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/javascript/javascript.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/css/css.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/htmlmixed/htmlmixed.min.js"></script>
+<script src="script.js"></script></body></html>
